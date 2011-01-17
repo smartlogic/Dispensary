@@ -10,10 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110117190955) do
+ActiveRecord::Schema.define(:version => 20110117215258) do
 
   create_table "apps", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "builds", :force => true do |t|
+    t.string   "binary_file_name"
+    t.string   "binary_content_type"
+    t.integer  "binary_file_size"
+    t.datetime "binary_updated_at"
+    t.string   "version"
+    t.integer  "application_id"
   end
 
 end

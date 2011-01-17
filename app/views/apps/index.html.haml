@@ -1,7 +1,12 @@
 - if apps && apps.count > 0
-  %ul
+  %table
+    %tr
+      %th name
+      %th
     - apps.each do |app|
-      %li= link_to app.name, app_path(app)
+      %tr
+        %td= link_to app.name, app_path(app)
+        %td= link_to "Add Build", new_app_build_path(app)
 - else
   %h2 No Applications
   = link_to 'Create New Application', new_app_path

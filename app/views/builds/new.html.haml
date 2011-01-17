@@ -1,0 +1,4 @@
+= form_for [app, build], :multipart => true do |f|
+  = f.label :binary
+  = f.file_field :binary
+  = f.submit 'Add Build'
