@@ -2,6 +2,7 @@ class AppsController < ApplicationController
   respond_to :html
 
   expose(:app)
+  expose(:apps) {App.all}
   
   def create
     if app.save
@@ -10,5 +11,8 @@ class AppsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def index
   end
 end

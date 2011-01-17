@@ -1,0 +1,7 @@
+- if apps && apps.count > 0
+  %ul
+    - apps.each do |app|
+      %li= app.name
+- else
+  %h2 No Applications
+  = link_to 'Create New Application', new_app_path
