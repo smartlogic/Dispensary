@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title Dispensary
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    %aside.flashes
+      - %w(notice error success warning info).each do |flash_type|
+        - if flash[flash_type.to_sym]
+          %div.flash{:class => flash_type}
+            = flash[flash_type.to_sym]
+            (click to hide)
+    
+    %section.content= yield

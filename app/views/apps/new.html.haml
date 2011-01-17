@@ -1,0 +1,7 @@
+%h1 Creating New Application
+
+= form_for app do |f|
+  = f.label :name
+  %small= error_message_on app, :name
+  = f.text_field :name
+  = f.submit "Create Application" 
