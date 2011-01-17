@@ -6,7 +6,7 @@ class CreateBuildTable < ActiveRecord::Migration
       t.integer :binary_file_size
       t.datetime :binary_updated_at
       t.string :version
-      t.references :application
+      t.references :app
     end
   end
 
