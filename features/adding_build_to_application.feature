@@ -10,7 +10,7 @@ Feature: Adding a build to an application
     And   I follow "Add Build"
 
   Scenario: Adding a build to an application from the application index
-    When  I attach the bundle "TestBuild.ipa"
+    When  I attach the bundle "TestBinary.ipa"
     And   I press "Add Build"
     Then  I should see "Build Added!"
     And   I should see "Application: Mollie's Fund"
