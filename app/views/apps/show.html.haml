@@ -8,6 +8,13 @@
   %br
   %br
   %h2 All Builds
-  %ul
+  %table
+    %tr
+      %th File Name
+      %th Upload Date
+      %th 
     - app.builds.each do |build|
-      %li= link_to build.binary_file_name, download_app_build_path(app, build) 
+      %tr
+        %td= link_to build.binary_file_name, app_build_path(app, build)
+        %td= build.binary_updated_at.strftime("%m/%d/%Y")
+        %td= link_to "Install", download_app_build_path(app, build)
