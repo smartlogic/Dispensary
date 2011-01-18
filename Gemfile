@@ -8,6 +8,7 @@ gem 'decent_exposure'
 gem 'haml'
 gem 'dynamic_form'
 gem 'paperclip'
+gem 'devise'
 
 group :development, :test do
   gem 'ruby-debug19'
