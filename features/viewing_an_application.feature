@@ -11,6 +11,14 @@ Feature: Viewing an application
     Then  I should see "Application: Mollie's Fund"
 
   Scenario: Seeing a list of an application's builds
+    Given I am on the homepage
+    And   the new app "Mollie's Fund" has the build "TestBuild.ipa"
+    And   the existing app "Mollie's Fund" has the build "TestBuild2.ipa"
+    And   I am on the homepage
+    When  I follow "All Applications"
+    And   I follow "Mollie's Fund"
+    Then  I should see "TestBuild2.ipa"
+    And   I should see "TestBuild.ipa"
 
   Scenario: Adding a build
     Given I am on the homepage

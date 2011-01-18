@@ -4,7 +4,7 @@ Feature: In application listing we should see a link to the latest build
   I want a link to the latest build on the application listing page
 
   Scenario: Downloading the latest build of an app from the application listing
-    Given the app "Mollie's Fund" has the build "TestBuild.ipa"
+    Given the new app "Mollie's Fund" has the build "TestBuild.ipa"
     When  I go to the homepage
     And   I follow "All Applications"
     And   I follow "Latest Build"

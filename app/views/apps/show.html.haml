@@ -3,3 +3,9 @@
   = link_to "Download latest build", download_app_build_path(app, app.latest_build)
 - else
   %h2= link_to "Add Build", new_app_build_path(app)
+
+- if app.builds.count > 1
+  %h2 All Builds
+  %ul
+    - app.builds.each do |build|
+      %li= link_to build.binary_file_name, download_app_build_path(app, build) 
