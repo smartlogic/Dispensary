@@ -10,3 +10,8 @@ Factory.define :build do |f|
   f.binary File.new(Rails.root.join('spec', 'fixtures', 'TestBinary.ipa'))
 end
 
+Factory.define :user do |f|
+  f.sequence(:email) {|n| "FrankieUser_#{n}@slsdev.net"}
+  f.password  "password"
+  f.password_confirmation "password"
+end

@@ -3,6 +3,11 @@ Feature: Viewing an application
   As a developer
   I want to be able to view an application
 
+  Background: 
+    Given the existing user: 
+      | email | test@slsdev.net |
+    And   I am logged in
+
   Scenario: Viewing an application
     Given I am on the homepage
     And   the app "Mollie's Fund"

@@ -4,7 +4,10 @@ Feature: Adding a build to an application
   I want to add builds to an application
 
   Background:
-    Given I am on the home page
+    Given the existing user:
+      | email | test@slsdev.net |
+    And   I am logged in
+    And   I am on the home page
     And   the app "Mollie's Fund"
     When  I follow "All Applications"
     And   I follow "Add Build"

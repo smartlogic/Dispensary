@@ -10,12 +10,14 @@ gem 'dynamic_form'
 gem 'paperclip'
 gem 'zippy'
 gem 'plist'
+gem 'devise'
 
 group :development, :test do
   gem 'ruby-debug19'
 end
 
 group :test do
+  gem 'launchy'
   gem 'factory_girl'
   gem 'rspec-rails'
   gem 'cucumber-rails'
