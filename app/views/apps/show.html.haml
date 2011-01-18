@@ -5,6 +5,8 @@
   %h2= link_to "Add Build", new_app_build_path(app)
 
 - if app.builds.count > 1
+  %br
+  %br
   %h2 All Builds
   %ul
     - app.builds.each do |build|
