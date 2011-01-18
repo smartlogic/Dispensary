@@ -1,8 +1,13 @@
+html, body {
+  height: 100%;
+}
+
 html {
   background: #C7E0D1; 
   margin: 0;
   padding: 0;
 }
+
 body {
   background: white;
   width: 60%;
@@ -11,22 +16,27 @@ body {
   font-family: Georgia, serif;
 }
 
-header {
-  background: #454A40;
-  color: white;
-  font-weight: bold;
-  font-family: "Trebuchet MS", sans-serif;
-  font-size: 24px;
-}
-
-header, section, aside {
-  padding: 10px 5px 4px 10px;
-}
-
 h1, h2 {
   margin: 0;
   margin-bottom: 10px;
 } 
+
+header h1 {
+  background: #454A40;
+  color: white;
+  font-weight: bold;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 40px;
+}
+
+header h3 {
+  padding-left: 15px;
+}
+
+section, aside, header h1 {
+  padding: 10px 5px 4px 10px;
+}
+
 
 table.apps td, table.apps th {
   width: 20%;
