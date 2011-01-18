@@ -1,2 +1,5 @@
 %h1 Application: #{app.name}
-= link_to "Download latest build", download_app_build_path(app, latest_build)
+- if latest_build
+  = link_to "Download latest build", download_app_build_path(app, latest_build)
+- else
+  = link_to "Add Build", new_app_build_path(app)
