@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20110117215258) do
     t.integer  "binary_file_size"
     t.datetime "binary_updated_at"
     t.string   "version"
-    t.integer  "application_id"
+    t.integer  "app_id"
   end
 
 end
