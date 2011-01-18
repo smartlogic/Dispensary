@@ -3,5 +3,6 @@ When /^I attach the bundle "([^"]+)"$/ do |name|
 end
 
 Then /^the response should be a binary$/ do
-  debugger
+  page.response_headers["Content-Transfer-Encoding"].should == "binary"
+  page.response_headers["Content-Type"].should == "application/octet-stream"
 end

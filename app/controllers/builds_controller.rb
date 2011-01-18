@@ -15,6 +15,6 @@ class BuildsController < ApplicationController
   end
 
   def download
-    send_file build.binary.url
+    send_file build.binary.path
   end
 end
