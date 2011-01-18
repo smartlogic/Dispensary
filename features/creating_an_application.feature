@@ -4,8 +4,11 @@ Feature: Creating a application
   I want to be able to create a new application
 
   Background:
-    Given I am on the homepage
-    And I follow "Create New Application"
+    Given the existing user:
+      | email | test@slsdev.net |
+    And   I am logged in
+    And   I am on the homepage
+    And   I follow "Create New Application"
 
   Scenario: Viewing the new application form
     Then  I should see "Creating New Application"

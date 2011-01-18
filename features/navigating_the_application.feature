@@ -4,10 +4,13 @@ Feature: Navigating the application
   I want to be able to go between the parts of the application
 
   Background:
-    Given the app "Mollie's Fund"
-    And the app "PPA"
-    And I am on the homepage
-    And I follow "All Applications"
+    Given the existing user:
+      | email | test@slsdev.net |
+    And   I am logged in
+    And   the app "Mollie's Fund"
+    And   the app "PPA"
+    And   I am on the homepage
+    And   I follow "All Applications"
 
   Scenario:
     When I follow "PPA"

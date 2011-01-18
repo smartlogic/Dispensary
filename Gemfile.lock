@@ -55,6 +55,7 @@ GEM
     childprocess (0.1.6)
       ffi (~> 0.6.3)
     columnize (0.3.2)
+    configuration (1.2.0)
     cucumber (0.10.0)
       builder (>= 2.1.2)
       diff-lcs (~> 1.1.2)
@@ -82,6 +83,9 @@ GEM
     i18n (0.5.0)
     json (1.4.6)
     json_pure (1.4.6)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
     linecache19 (0.5.11)
       ruby_core_source (>= 0.1.4)
     mail (2.2.14)
@@ -176,6 +180,7 @@ DEPENDENCIES
   dynamic_form
   factory_girl
   haml
+  launchy
   nokogiri
   paperclip
   pg

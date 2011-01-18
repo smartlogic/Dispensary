@@ -3,6 +3,11 @@ Feature: Viewing apps
   As a developer
   I want to view a listing of all my apps
 
+  Background: 
+    Given the existing user:
+      | email | test@slsdev.net |
+    And   I am logged in
+
   Scenario: Viewing applications w/o having any
     Given I am on the homepage
     When  I follow "All Applications"
