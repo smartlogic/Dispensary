@@ -18,6 +18,7 @@ group :test do
   gem 'factory_girl'
   gem 'rspec-rails'
   gem 'cucumber-rails'
+  gem 'database_cleaner'
   gem 'nokogiri'
   gem 'capybara'
   gem 'ZenTest'
