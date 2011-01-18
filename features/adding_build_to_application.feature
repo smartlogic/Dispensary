@@ -13,6 +13,7 @@ Feature: Adding a build to an application
     When  I attach the bundle "TestBuild.ipa"
     And   I press "Add Build"
     Then  I should see "Build Added!"
+    And   I should see "Application: Mollie's Fund"
 
   Scenario: Adding a build to an application w/o a file attachment
     When  I press "Add Build"

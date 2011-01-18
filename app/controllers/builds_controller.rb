@@ -8,7 +8,7 @@ class BuildsController < ApplicationController
     build.app_id = app.id
     if build.save
       flash[:notice] = "Build Added!"
-      respond_with(app, build)
+      redirect_to app
     else
       render :new
     end
