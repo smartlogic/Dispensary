@@ -9,6 +9,7 @@ gem 'haml'
 gem 'dynamic_form'
 gem 'paperclip'
 gem 'zippy'
+gem 'plist'
 
 group :development, :test do
   gem 'ruby-debug19'
@@ -18,7 +19,6 @@ group :test do
   gem 'factory_girl'
   gem 'rspec-rails'
   gem 'cucumber-rails'
-  gem 'database_cleaner'
   gem 'nokogiri'
   gem 'capybara'
   gem 'ZenTest'
