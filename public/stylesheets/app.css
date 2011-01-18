@@ -1,8 +1,13 @@
+html, body {
+  height: 100%;
+}
+
 html {
   background: #C7E0D1; 
   margin: 0;
   padding: 0;
 }
+
 body {
   background: white;
   width: 60%;
