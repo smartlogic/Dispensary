@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(:version => 20110119164404) do
     t.string   "version"
     t.integer  "app_id"
     t.string   "display_name"
-    t.string   "version_number"
     t.string   "bundle_identifier"
   end
 

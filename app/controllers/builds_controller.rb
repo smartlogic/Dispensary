@@ -1,5 +1,7 @@
+Mime::Type.register "text/xml", :plist
+
 class BuildsController < ApplicationController
-  respond_to :html
+  respond_to :html, :plist
 
   expose(:app)
   expose(:build)
