@@ -1,5 +1,3 @@
-IP_ADDRESS = "192.168.1.110"
-
 Dispensary::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
