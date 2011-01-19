@@ -11,6 +11,7 @@ Given /^the existing user:$/ do |table|
 end
 
 Given /^I am logged in$/ do
+  @user ||= Factory(:user)
   steps %Q{
     Given I am on the homepage
     And   I follow "Sign In"
