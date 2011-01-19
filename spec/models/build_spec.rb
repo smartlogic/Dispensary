@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Build, "Generating metadata from upload" do
   it "should have a version number" do
     binary = Factory(:build)
-    binary.version_number.should == "1.0"
+    binary.version.should == "1.0"
   end
 
   it "should have a bundle identifier" do

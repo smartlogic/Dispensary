@@ -16,7 +16,7 @@ class Build < ActiveRecord::Base
   end
 
   def extract_metadata
-    if version_number.nil?
+    if version.nil?
       ipa = Zippy.open(binary.path)
       plist_data = ipa[ipa.paths.grep(/\/Info.plist/).first]
       plist_path = binary.path + ".plist"
@@ -25,7 +25,7 @@ class Build < ActiveRecord::Base
       plist.close
       data = Plist::parse_xml(get_xml(plist_path))
 
-      update_attribute(:version_number, data["CFBundleVersion"])
+      update_attribute(:version, data["CFBundleVersion"])
       update_attribute(:display_name, data["CFBundleDisplayName"])
       update_attribute(:bundle_identifier, data["CFBundleIdentifier"])
     end

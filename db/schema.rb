@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110118221327) do
+ActiveRecord::Schema.define(:version => 20110119153524) do
 
   create_table "apps", :force => true do |t|
     t.string "name"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(:version => 20110118221327) do
     t.string   "version"
     t.integer  "app_id"
     t.string   "display_name"
-    t.string   "version_number"
     t.string   "bundle_identifier"
   end
 
