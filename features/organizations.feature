@@ -19,3 +19,8 @@ Feature: Organizations
   Scenario: Viewing all organizations
 
   Scenario: Creating a organization without a name
+    Given I am logged in
+    And   I am on the homepage
+    And   I follow "Create new organization"
+    When  I press "Create organization"
+    Then  I should see "Name is required"
