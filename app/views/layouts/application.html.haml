@@ -7,7 +7,7 @@
     = csrf_meta_tag
   %body
     %header
-      %h1 Dispensary
+      %h1= link_to "Dispensary", root_path
       %h3 Test Your #{link_to "Apps", apps_path}
     %aside.flashes
       - %w(notice alert error success warning info).each do |flash_type|

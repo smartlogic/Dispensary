@@ -33,7 +33,7 @@ h1, h2 {
 header h1 {
   color: white;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 60px;
   line-height: 40px;
   padding: 30px 10px 5px 10px;
 }
@@ -62,6 +62,25 @@ header h3 a {
 header h3 a:hover {
   border-color: white;
   color: white;
+}
+
+h3.button {
+  display: inline-block;
+}
+
+h3.button a {
+  background: #B3ACA6;
+  display: inline-block;
+  border: 1px solid #656B5E;
+  font-family: "Georgia"; 
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+h3.button a:hover {
+  background: #54826D;
 }
 
 
