@@ -1,3 +1,5 @@
+IP_ADDRESS = "192.168.1.110"
+
 Dispensary::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -23,5 +25,6 @@ Dispensary::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+
 end
 
