@@ -22,8 +22,8 @@ Feature: Viewing an application
     And   I follow "My Organizations"
     And   I follow "SmartLogic Solutions"
     And   I follow "Mollie's Fund"
-    Then  I should see "TestBinary.ipa"
-    And   I should see "TestBinary2.ipa"
+    Then  I should see "testbinary.ipa"
+    And   I should see "testbinary2.ipa"
 
   Scenario: Adding a build
     Given I am on the homepage
@@ -33,7 +33,7 @@ Feature: Viewing an application
     And   I follow "Mollie's Fund"
     Then  I should see "Add Build"
     When  I follow "Add Build"
-    Then  I should see "Binary"
+    Then  I should see "Bundle"
 
   Scenario: Viewing applications w/o having any
     Given I am on the homepage

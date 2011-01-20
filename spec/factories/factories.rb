@@ -7,7 +7,7 @@ end
 
 Factory.define :build do |f|
   f.association :app, :factory => :valid_app
-  f.binary File.new(Rails.root.join('spec', 'fixtures', 'TestBinary.ipa'))
+  f.bundle File.new(Rails.root.join('spec', 'fixtures', 'TestBinary.ipa'))
 end
 
 Factory.define :user do |f|

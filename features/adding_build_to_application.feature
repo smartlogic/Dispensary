@@ -19,4 +19,4 @@ Feature: Adding a build to an application
 
   Scenario: Adding a build to an application w/o a file attachment
     When  I press "Add Build"
-    Then  I should see "You must attach a file"
+    Then  I should see "You must attach an iOS bundle"

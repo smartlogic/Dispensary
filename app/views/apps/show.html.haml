@@ -1,6 +1,6 @@
 %h1 Application: #{app.name}
 - if app.latest_build
-  %h3= link_to "Download latest build", download_organization_app_build_path(organization, app, app.latest_build)
+  %h3= link_to "Download latest build", app.latest_build.bundle.url
   %h3= link_to "Install latest build", "itms-services://?action=download-manifest&url=#{install_organization_app_build_url(organization, app, app.latest_build, :format => 'plist').gsub(/localhost/, IP_ADDRESS)}.plist"
 - else
   %h2= link_to "Add Build", new_organization_app_build_path(organization, app)
@@ -16,6 +16,6 @@
       %th 
     - app.builds.each do |build|
       %tr
-        %td= link_to build.binary_file_name, organization_app_build_path(organization, app, build)
-        %td= build.binary_updated_at.strftime("%m/%d/%Y")
+        %td= link_to 'file_name', organization_app_build_path(organization, app, build)
+        %td= build.bundle_updated_at.strftime("%m/%d/%Y")
         %td= link_to "Install", download_organization_app_build_path(organization, app, build)

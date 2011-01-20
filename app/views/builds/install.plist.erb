@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string><%= download_app_build_url(app, build).gsub(/localhost/, IP_ADDRESS) %></string>
+					<string><%= build.bundle.url.gsub(/localhost/, IP_ADDRESS) %></string>
 				</dict>
 			</array>
 			<key>metadata</key>
@@ -23,7 +23,7 @@
 				<key>kind</key>
 				<string>software</string>
 				<key>subtitle</key>
-				<string><%= build.binary_file_name %></string>
+				<string>Subtitle</string>
 				<key>title</key>
 				<string><%= build.display_name %></string>
 			</dict>
