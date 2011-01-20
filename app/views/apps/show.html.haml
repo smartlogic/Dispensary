@@ -1,6 +1,6 @@
 %h1 Application: #{app.name}
 - if app.latest_build
-  %h3= link_to "Download latest build", download_app_build_path(app, app.latest_build)
+  %h3= link_to "Download latest build", app.latest_build.bundle.url
   %h3= link_to "Install latest build", "itms-services://?action=download-manifest&url=#{install_app_build_url(app, app.latest_build, :format => 'plist').gsub(/localhost/, IP_ADDRESS)}.plist"
 - else
   %h2= link_to "Add Build", new_app_build_path(app)

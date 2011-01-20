@@ -1,12 +1,9 @@
 # encoding: utf-8
 
 class BundleUploader < CarrierWave::Uploader::Base
-  # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :s3
-  # access_key_id: '0943GY2MVTN18DENQWG2'
-  # secret_access_key: '1mkIX9esxj4xmCV91mbLWW4Prm0j+Vfi5GjZshIo'
-
+  def s3_bucket
+    'sls-appdepository-dev'
+  end
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -48,4 +45,5 @@ class BundleUploader < CarrierWave::Uploader::Base
   def extension_white_list
     %w(ipa)
   end
+
 end
