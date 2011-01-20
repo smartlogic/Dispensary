@@ -35,6 +35,7 @@ class BundleUploader < CarrierWave::Uploader::Base
       end
 
       Plist::parse_xml(get_xml(plist_path)).tap do |data|
+        break if data.nil?
         model.update_attribute(:version, data["CFBundleVersion"])
         model.update_attribute(:display_name, data["CFBundleDisplayName"])
         model.update_attribute(:bundle_identifier, data["CFBundleIdentifier"])

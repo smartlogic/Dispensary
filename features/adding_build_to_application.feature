@@ -21,3 +21,10 @@ Feature: Adding a build to an application
   Scenario: Adding a build to an application w/o a file attachment
     When  I press "Add Build"
     Then  I should see "You must attach an iOS bundle"
+    And   I should not see "Build Added!"
+
+  Scenario: Adding a corrupt build to an application
+    When  I attach the bundle "BadBinaryCorruptPlist.ipa"
+    And   I press "Add Build"
+    Then  I should not see "Build Added!"
+    And   I should see "your bundle seems to be corrupt or missing data"

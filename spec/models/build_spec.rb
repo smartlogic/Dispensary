@@ -22,10 +22,35 @@ describe Build, "Generating metadata from upload" do
   # Bundle name: TestBinaryBundle
   # Bundle version: 1.0
 
-  it "should fail when the plist is corrupt"
-  it "should fail when there is no plist"
-  it "should fail when there is no bundle inside the ipa"
-  it "should fail when there is no bundle identifier in the plist"
-  it "should fail when the ipa is not a zip file"
+  def build_bad_factory(filename)
+    file = File.open(Rails.root.join("spec", "fixtures", filename))
+    build = Factory.build(:build, :bundle => file)
+    file.close
+    build
+  end
 
+  it "should fail when the plist is corrupt" do
+    binary = build_bad_factory("BadBinaryCorruptPlist.ipa")
+    binary.should_not be_valid
+  end
+
+  it "should fail when there is no plist" do
+    binary = build_bad_factory("BadBinaryNoPlist.ipa")
+    binary.should_not be_valid
+  end
+
+  it "should fail when there is no bundle inside the ipa" do
+    binary = build_bad_factory("BadBinaryNoBundle.ipa")
+    binary.should_not be_valid
+  end
+
+  it "should fail when there is no bundle identifier in the plist" do
+    binary = build_bad_factory("BadBinaryNoBundleIdentifierInPlist.ipa")
+    binary.should_not be_valid
+  end
+
+  it "should fail when the ipa is not a zip file" do
+    binary = build_bad_factory("BadBinaryNotAZip.ipa")
+    binary.should_not be_valid
+  end
 end
