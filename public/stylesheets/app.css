@@ -85,8 +85,8 @@ h3.button a:hover {
 
 
 table.apps td, table.apps th {
-  width: 20%;
   text-align: left;
+  width: 20%;
 }
 
 section.content {

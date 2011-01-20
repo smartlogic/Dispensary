@@ -26,6 +26,7 @@ class BundleUploader < CarrierWave::Uploader::Base
   def extract_metadata
     if model.version.nil?
       ipa = Zippy.open(model.bundle.path)
+
       plist_data = ipa[ipa.paths.grep(/\/Info.plist/).first]
       plist_path = Rails.root.join("tmp", model.bundle.path + ".plist")
       File.new(plist_path, 'wb').tap do |plist|
@@ -46,4 +47,7 @@ class BundleUploader < CarrierWave::Uploader::Base
     %w(ipa)
   end
 
+  def filename
+    File.basename(path)
+  end
 end
