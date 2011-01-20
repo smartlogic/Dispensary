@@ -16,6 +16,6 @@
       %th 
     - app.builds.each do |build|
       %tr
-        %td= link_to build.binary_file_name, app_build_path(app, build)
-        %td= build.binary_updated_at.strftime("%m/%d/%Y")
+        %td= link_to build.bundle.file.filename, app_build_path(app, build)
+        %td= build.created_at.strftime("%m/%d/%Y")
         %td= link_to "Install", download_app_build_path(app, build)

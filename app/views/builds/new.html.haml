@@ -1,5 +1,5 @@
 = form_for [app, build], :html => { :multipart => true } do |f|
-  = f.label :binary
-  %small= f.error_message_on :binary_file_name
-  = f.file_field :binary
+  = f.label :bundle
+  %small= f.error_message_on :bundle
+  = f.file_field :bundle
   = f.submit 'Add Build'

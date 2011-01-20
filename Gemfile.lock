@@ -51,6 +51,8 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.27)
       xpath (~> 0.1.2)
+    carrierwave (0.5.1)
+      activesupport (~> 3.0)
     celerity (0.8.7)
     childprocess (0.1.6)
       ffi (~> 0.6.3)
@@ -102,9 +104,6 @@ GEM
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
     nokogiri (1.4.4)
-    paperclip (2.3.8)
-      activerecord
-      activesupport
     pg (0.10.0)
     plist (3.1.0)
     polyglot (0.3.1)
@@ -177,6 +176,7 @@ DEPENDENCIES
   autotest-rails
   capistrano
   capybara
+  carrierwave
   cucumber-rails
   decent_exposure
   devise
@@ -185,7 +185,6 @@ DEPENDENCIES
   haml
   launchy
   nokogiri
-  paperclip
   pg
   plist
   rails (= 3.0.3)
