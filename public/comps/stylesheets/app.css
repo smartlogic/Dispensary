@@ -79,6 +79,34 @@ body div#content {
 	padding-bottom: 1.5em;
 }
 
+a.button {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0px 1px 2px #030;
+	background-color: #393;
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#3b3), to(#070));
+	padding: 8px 16px;
+	border-radius: 5px;
+	border: solid 1px #050;
+	display: inline-block;
+	margin: 5px 0;
+}
+
+a.button:hover {
+	text-shadow: 0 1px 2px #050;
+	background-color: #5b5;
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#4c4), to(#090));
+	border: solid 1px #070;
+}
+
+a.button:active {
+	text-shadow: 0 1px 2px #010;
+	background-color: #171;
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#191), to(#050));
+	border: solid 1px #030;
+}
+
 form {
 	margin-top: 1.5em;
 	font-size: 85%;
