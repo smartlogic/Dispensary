@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td { margin: 0px; padding: 0px; }
+
+
+/********** HEADER ************/
+div#header-holder {
+	background-color: black;
+	margin-bottom: 1em;
+}
+
+div#header {
+	width: 960px;
+	margin: 0px auto;
+	color: white;
+	padding-bottom: .5em;
+}
+
+div#header h1 {
+	display: inline;
+	margin-right: 1em;
+}
+
+/******* BODY STUFF *******/
+body {
+	background-color: #E0E0E0;
+	font-family: 'Helvetica Neue', HelveticaNeue, Helvetica-Neue, Helvetica, 'BBAlpha Sans', sans-serif;
+}
+
+p {
+	margin-bottom: .75em;
+}
+
+h1 a {
+	color: white;
+}
+
+h2 {
+	margin-bottom: .65em;
+}
+
+div {
+	margin-bottom: .5em;
+}
+
+body div#navigation {
+	width: 960px;
+	margin: 0px auto;
+}
+
+body div#navigation a {
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	background-color: #36C;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 5px 10px;
+	margin-top: 15px;
+	display: inline-block;
+}
+
+body div#navigation a.selected {
+	background-color: #107;
+}
+
+body div#navigation a:hover {
+	background-color: #6CF;
+}
+
+body div#content {
+	display: block;
+	margin: 0px auto;
+	width: 940px;
+	background-color: white;
+	border: solid 1px #CCC;
+	padding: 10px;
+	padding-bottom: 1.5em;
+}
+
+form {
+	margin-top: 1.5em;
+	font-size: 85%;
+}
+
+form .field label {
+	float: left;
+	width: 8em;
+	text-align: right;
+	padding-right: .5em;
+}
+
+form .field label:after {
+	content: ":";
+}
+
+form .required label:after {
+	content: ":*";
+}
+
+form input[type="submit"] {
+	margin-left: 8em;
+	margin-top: 2em;
+}
+
+form .field .error-message {
+	color: red;
+	font-weight: bold;
+	padding-left: .5em;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table tr th {
+	background-color: #EEE;
+	font-weight: bold;
+	border: solid #D8D0D4;
+	border-width: 1px 0px;
+	padding: .4em;
+	padding-right: 1.5em;
+	text-align: left;
+	font-size: 85%;
+}
+
+table tr td {
+	padding: .4em;
+	padding-right: 4.5em;
+	font-size: 85%;
+	border-bottom: solid 1px #DEDEDE;
+}
+
+table tr:last-child td {
+	border-bottom: solid 2px #999;
+}
+
+table tr th:last-child, table tr td:last-child {
+	margin-right: 0px;
+}
+
+.message {
+	padding: .5em;
+	font-size: smaller;
+	margin-bottom: 1em;
+}
+
+.error {
+	border: solid 1px #CC3322;
+	background-color: #FFD6D6;
+}
+
+.success {
+	border: solid 1px #33CC22;
+	background-color: #D6FFD6;
+}
+
+.warning {
+	border: solid 1px #CCCC33;
+	background-color: #FFFFCC;
+}
+
+.info {
+  border: solid 1px #2233CC;
+  background-color: #D6D6FF;
+}
+
+/********* FOOTER **********/
+div#footer {
+	text-align: center;
+	font-size: 75%;
+	color: #666;
+	margin: 1em auto;
+	width: 960px;
+}

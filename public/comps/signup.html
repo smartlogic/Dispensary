@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+		<title>Sign Up | AppDispensary</title> 
+		<link href="stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" /> 
+	</head>
+	
+	<body>
+		<div style="position:absolute;top:0px;left:0px;">
+			<a href="#" onclick="toggle('error');">toggle error</a><br/>
+			<a href="#" onclick="toggle('info');">toggle info</a><br/>
+			<a href="#" onclick="toggle('success');">toggle success</a><br/>
+			<a href="#" onclick="toggle('warning');">toggle warning</a><br/>
+		</div>
+		<div id="header-holder"><div id="header">
+			<h1><a href="./">AppDispensary</a></h1> dispense your app
+		</div></div>
+		
+		<div id="content-holder"><div id="content">
+			<h2>Create an Account</h2>
+			<div class="error message" id="error">That email address is already in use.  Have you <a href="#">forgotten your password?</a></div>
+			<div class="info message" id="info">Your account has been created.  Please check your email and click the verification link.</div>
+			<div class="success message" id="success">
+				Your organization has been created!  Please proceed.
+			</div>
+			<div class="warning message" id="warning">
+				This is a warning message.  Please proceed with caution or undo whatever you just did.
+			</div>
+			<script type="text/javascript">
+				function toggle(obj) {
+					var el = document.getElementById(obj);
+					if ( el.style.display != 'none' ) {
+						el.style.display = 'none';
+					}
+					else {
+						el.style.display = '';
+					}
+				}
+				toggle('error');
+				toggle('info');
+				toggle('success');
+				toggle('warning');
+			</script>
+			<p>Complete this form and start using AppDispensary immediately.</p>
+			<form action="" method="post">
+				<div class="required field">
+					<label for="user_email">Email Address</label> 
+					<input id="user_email" name="user[email]" type="text" value="" />
+					<span class="error-message">The email address you entered is invalid</span>
+				</div>
+				<div class="required field">
+					<label for="user_password">Password</label>
+					<input id="user_password" name="user[password]" type="password" />
+				</div>
+				<div class="field">
+					<label for="user_password_confirmation">Confirm</label>
+					<input id="user_password_confirmation" name="user[password_confirmation]" type="password" />
+				</div>
+				<input type="submit" value="Create My Account" />
+			</form>
+		</div></div>
+		
+		<div id="footer">
+			&copy; 2011 AppDispensary, LLC. All rights reserved. Terms and conditions, features, support, pricing and service options subject to change without notice.
+			| <a href="#">Terms</a>
+			| <a href="#">Privacy</a>
+			| <a href="#">Policies</a>
+		</div>
+	</body>
+</html>
