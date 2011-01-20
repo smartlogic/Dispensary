@@ -79,7 +79,7 @@ body div#content {
 	padding-bottom: 1.5em;
 }
 
-a.button {
+a.button, input[type="submit"] {
 	color: #fff;
 	font-weight: bold;
 	text-decoration: none;
@@ -91,16 +91,18 @@ a.button {
 	border: solid 1px #050;
 	display: inline-block;
 	margin: 5px 0;
+	font-size: 16px;
 }
 
-a.button:hover {
+a.button:hover, input[type="submit"]:hover {
 	text-shadow: 0 1px 2px #050;
-	background-color: #5b5;
+	background-color: #5B5;
 	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#4c4), to(#090));
 	border: solid 1px #070;
+	cursor: pointer;
 }
 
-a.button:active {
+a.button:active, input[type="submit"]:active {
 	text-shadow: 0 1px 2px #010;
 	background-color: #171;
 	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#191), to(#050));
@@ -128,8 +130,8 @@ form .required label:after {
 }
 
 form input[type="submit"] {
-	margin-left: 8em;
-	margin-top: 2em;
+	margin-left: 48px;
+	margin-top: 12px;
 }
 
 form .field .error-message {
