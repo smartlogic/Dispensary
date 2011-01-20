@@ -22,4 +22,10 @@ describe Build, "Generating metadata from upload" do
   # Bundle name: TestBinaryBundle
   # Bundle version: 1.0
 
+  it "should fail when the plist is corrupt"
+  it "should fail when there is no plist"
+  it "should fail when there is no bundle inside the ipa"
+  it "should fail when there is no bundle identifier in the plist"
+  it "should fail when the ipa is not a zip file"
+
 end
