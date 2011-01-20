@@ -10,4 +10,4 @@ ensure
   Socket.do_not_reverse_lookup = orig
 end
 
-IP_ADDRESS = local_ip
+IP_ADDRESS = local_ip if !defined?(IP_ADDRESS)

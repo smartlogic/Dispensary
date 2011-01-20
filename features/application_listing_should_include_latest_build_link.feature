@@ -3,7 +3,7 @@ Feature: In application listing we should see a link to the latest build
   As a developer
   I want a link to the latest build on the application listing page
 
-  Background: 
+  Background:
     Given the existing user:
       | email | test@slsdev.net |
     And   I am logged in
@@ -13,7 +13,7 @@ Feature: In application listing we should see a link to the latest build
     When  I go to the homepage
     And   I follow "All Applications"
     And   I follow "Latest Build"
-    Then  the response should be a binary
+    Then  the response should be the file "TestBinary.ipa"
 
   Scenario: Seeing "No Builds" next to app in application listing when it doesn't have any builds
     Given the app "Mollie's Fund"

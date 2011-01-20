@@ -3,8 +3,8 @@ Feature: Viewing an application
   As a developer
   I want to be able to view an application
 
-  Background: 
-    Given the existing user: 
+  Background:
+    Given the existing user:
       | email | test@slsdev.net |
     And   I am logged in
 
@@ -22,8 +22,8 @@ Feature: Viewing an application
     And   I am on the homepage
     When  I follow "All Applications"
     And   I follow "Mollie's Fund"
-    Then  I should see "TestBinary.ipa"
-    And   I should see "TestBinary2.ipa"
+    Then  I should see "testbinary.ipa"
+    And   I should see "testbinary2.ipa"
 
   Scenario: Adding a build
     Given I am on the homepage
@@ -32,4 +32,4 @@ Feature: Viewing an application
     And   I follow "Mollie's Fund"
     Then  I should see "Add Build"
     When  I follow "Add Build"
-    Then  I should see "Binary"
+    Then  I should see "Bundle"
