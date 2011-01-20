@@ -1,4 +1,5 @@
 = form_for organization do |f|
   = f.label :name
+  %small= f.error_message_on :name
   = f.text_field :name
   = f.submit 'Create organization'
