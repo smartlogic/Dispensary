@@ -4,19 +4,18 @@ Feature: Adding a build to an application
   I want to add builds to an application
 
   Background:
-    Given the existing user:
-      | email | test@slsdev.net |
-    And   I am logged in
+    Given I am logged in
+    And   I have an organization named "SmartLogic Solutions"
+    And   the organization named "SmartLogic Solutions" has the app "Mollie's Fund"
     And   I am on the home page
-    And   the app "Mollie's Fund"
-    When  I follow "All Applications"
+    And   I follow "My Organizations"
+    And   I follow "SmartLogic Solutions"
     And   I follow "Add Build"
 
   Scenario: Adding a build to an application from the application index
     When  I attach the bundle "TestBinary.ipa"
     And   I press "Add Build"
     Then  I should see "Build Added!"
-    And   I should see "Application: Mollie's Fund"
 
   Scenario: Adding a build to an application w/o a file attachment
     When  I press "Add Build"

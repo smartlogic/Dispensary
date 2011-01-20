@@ -4,19 +4,20 @@ Feature: In application listing we should see a link to the latest build
   I want a link to the latest build on the application listing page
 
   Background: 
-    Given the existing user:
-      | email | test@slsdev.net |
-    And   I am logged in
+    Given I am logged in
+    And   I have an organization named "SmartLogic Solutions"
+    And   the organization named "SmartLogic Solutions" has the app "Mollie's Fund"
+    And   I am on the home page
+ 
 
   Scenario: Downloading the latest build of an app from the application listing
-    Given the new app "Mollie's Fund" has the build "TestBinary.ipa"
-    When  I go to the homepage
-    And   I follow "All Applications"
+    Given the existing app "Mollie's Fund" has the build "TestBinary.ipa"
+    And   I follow "My Organizations"
+    And   I follow "SmartLogic Solutions"
     And   I follow "Latest Build"
     Then  the response should be a binary
 
   Scenario: Seeing "No Builds" next to app in application listing when it doesn't have any builds
-    Given the app "Mollie's Fund"
-    When  I go to the homepage
-    And   I follow "All Applications"
+    When  I follow "My Organizations"
+    And   I follow "SmartLogic Solutions"
     Then  I should see "No Builds"

@@ -1,6 +1,6 @@
 %h1 Creating New Application
 
-= form_for app do |f|
+= form_for [organization, app] do |f|
   = f.label :name
   %small= error_message_on app, :name
   = f.text_field :name

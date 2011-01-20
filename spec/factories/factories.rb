@@ -15,3 +15,7 @@ Factory.define :user do |f|
   f.password  "password"
   f.password_confirmation "password"
 end
+
+Factory.define :organization do |f|
+  f.sequence(:name) {|n| "SomeCompany#{n}"}
+end

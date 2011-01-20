@@ -4,12 +4,12 @@ Feature: User can download a build of an application
   I want download a build of an application
 
   Scenario: User downloads a build of a file
-    Given the existing user:
-      | email | test@slsdev.net |
-    And   I am logged in
-    And   the new app "Mollie's Fund" has the build "TestBinary.ipa"
+    Given I am logged in
+    And   I have an organization named "SmartLogic Solutions"
+    And   the new app "Mollie's Fund" for the organization "SmartLogic Solutions" has the build "TestBinary.ipa"
     When  I go to the homepage
-    And   I follow "All Applications"
+    And   I follow "My Organizations"
+    And   I follow "SmartLogic Solutions"
     And   I follow "Mollie's Fund"
     And   I follow "Download latest build"
     Then  the response should be a binary

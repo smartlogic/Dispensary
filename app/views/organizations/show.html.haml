@@ -1,0 +1,20 @@
+%h3.button= link_to 'Create New Application', new_organization_app_path(organization)
+
+- if organization.apps && organization.apps.count > 0
+  %h2 Active Applications
+  %table.apps
+    %tr
+      %th name
+      %th
+    - organization.apps.each do |app|
+      %tr
+        %td= link_to app.name, organization_app_path(organization, app)
+        %td
+          = link_to "Add Build", new_organization_app_build_path(organization, app)
+          |
+          - if app.latest_build
+            = link_to "Latest Build", download_organization_app_build_path(organization, app, app.latest_build)
+          - else
+            No Builds
+- else
+  %h2 No Applications

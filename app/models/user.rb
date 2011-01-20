@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me
+
+  has_many :organizations, :foreign_key => "owner_id"
 end
