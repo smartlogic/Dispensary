@@ -1,40 +1,86 @@
+@import url("../fonts/ChunkFive/stylesheet.css");
+
+/* http://colorschemedesigner.com/#3242Kd2r1gwoF */
+
 html, body {
   height: 100%;
 }
 
 html {
-  background: #C7E0D1; 
+  background: #89847C;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: white;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   padding: 0;
   font-family: Georgia, serif;
 }
 
-h1, h2 {
-  margin: 0;
-  margin-bottom: 10px;
-} 
+section.content {
+  height: 100%;
+}
 
+h1, h3 {
+  margin: 0;
+} 
+h1, h2 {
+  font-family: "ChunkFiveRegular", "Georgia";
+  text-shadow: black 1px 0px -1px;
+}
 header h1 {
-  background: #454A40;
   color: white;
   font-weight: bold;
-  font-family: "Trebuchet MS", sans-serif;
-  font-size: 40px;
+  font-size: 60px;
+  line-height: 40px;
+  padding: 30px 10px 5px 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header h1, section.content, section.aside {
+  padding-left: 40px;
 }
 
 header h3 {
-  padding-left: 15px;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  padding-left: 60px;
 }
 
-section, aside, header h1 {
-  padding: 10px 5px 4px 10px;
+header h3 a {
+  color: #C2AEAA;
+  padding-bottom: 3px;
+  border-bottom: #B3A3A6 3px solid;
+}
+
+header h3 a:hover {
+  border-color: white;
+  color: white;
+}
+
+h3.button {
+  display: inline-block;
+}
+
+h3.button a {
+  background: #B3ACA6;
+  display: inline-block;
+  border: 1px solid #656B5E;
+  font-family: "Georgia"; 
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+h3.button a:hover {
+  background: #54826D;
 }
 
 
@@ -42,3 +88,14 @@ table.apps td, table.apps th {
   width: 20%;
   text-align: left;
 }
+
+section.content {
+  margin-top: 30px;
+}
+
+h1, h2 {
+  color: white;
+  text-shadow: black 1px 0px -1px;
+  font-weight: normal;
+}
+
