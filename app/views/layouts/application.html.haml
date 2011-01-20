@@ -1,13 +1,13 @@
 !!!
 %html
   %head
-    %title Dispensary
+    %title AppDispensary
     = stylesheet_link_tag :all
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
     %header
-      %h1= link_to "Dispensary", root_path
+      %h1= link_to "AppDispensary", root_path
       %h3 Test Your #{link_to "Apps", apps_path}
     %aside.flashes
       - %w(notice alert error success warning info).each do |flash_type|
