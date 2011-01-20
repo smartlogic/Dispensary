@@ -9,13 +9,15 @@
   %br
   %br
   %h2 All Builds
-  %table
+  %table.apps
     %tr
       %th File Name
       %th Upload Date
+      %th Version
       %th 
     - app.builds.each do |build|
       %tr
-        %td= link_to 'file_name', organization_app_build_path(organization, app, build)
-        %td= build.bundle_updated_at.strftime("%m/%d/%Y")
+        %td= link_to build.bundle.filename, organization_app_build_path(organization, app, build)
+        %td= build.created_at.strftime("%m/%d/%Y %H:%M:%S")
+        %td= build.version
         %td= link_to "Install", download_organization_app_build_path(organization, app, build)
